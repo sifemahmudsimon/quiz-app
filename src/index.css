@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* primary #150080
+accent #d08642
+backgrounnd #ffffff
+bg accent #e7e8e9
+disabled #9c9c9c
+foreground #2d264b */
+:root {
+    --primary: #150080;
+    --accent: #d08642;
+    --backgrounnd: #ffffff;
+    --bg-accent: #e7e8e9;
+    --disabled: #9c9c9c;
+    --foreground: #2d264b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.quiz-container {
+    width: 500px;
+    background: var(--backgrounnd);
+    border-radius: 4px;
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+
+.active-qnuestion-no {
+    font-size: 32px;
+    font-weight: 500px;
+    color: var(--primary);
+
+}
+
+.total-question {
+    font-size: 16px;
+    font-weight: 500px;
+    color: var(--disabled);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500px;
+    margin: 0;
+}
+
+ul {
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    background: var(--bg-accent);
+    border: 1px solid var(--disabled);
+    border-radius: 16px;
+    padding: 11px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.selected-answer {
+    background: var(--primary);
+    border: 1px solid var(--bg-accent);
+    color: var(--backgrounnd);
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background: var(--primary);
+    border-radius: 9px;
+    font-size: 18px;
+    color: var(--backgrounnd);
+    padding: 10px 42px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:active {
+    background: var(--primary);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+    transform: translate(2px, 2px);
+}
+
+button[disabled] {
+    background: var(--bg-accent);
+    color: var(--disabled);
+}
+
+button[disabled]:active {
+    background: var(--bg-accent);
+    color: var(--disabled);
+}
+
+
+.result {
+    text-align: center;
+}
+
+.result>h3 {
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p span {
+    color: var(--primary);
+    font-size: 26px;
+    font-weight: bold;
 }
